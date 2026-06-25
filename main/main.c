@@ -38,7 +38,7 @@ void read_todo(void){
     printf("\n=========할 일 목록=========\n");
     for (int i = 0; i < todo_count; i++) {
     
-        char status_marker = todo_list[i].is_completed ? 'X' : ' ';    
+        char status_marker = todo_list[i].is_completed ? 'X' : ' ';
     }
 }
 
