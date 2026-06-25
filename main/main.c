@@ -2,12 +2,32 @@
 #include <stdbool.h>
 
 #define MAX_LENGTH 256
+#define MAX_TODOS 100
 
 typedef struct {
     int id;
     char content[MAX_LENGTH];
     bool is_completed;
 } Todo;
+
+Todo todo_list[MAX_TODOS];
+int todo_count = 0;
+
+void create_todo(const char *content) {
+    if (todo_count >= MAX_TODOS) {
+        printf("에러: 저장 공간이 가득 차서 더 이상 추가할 수 없습니다.\n");
+        return;
+    }
+    todo_list[todo_count].id = todo_count + 1;
+
+    strcpy(todo_list[todo_count].content, content);
+
+    todo_list[todo_count].is_completed = false;
+
+    printf("성공: 할 일이 추가되었습니다. (ID: %d)\n", todo_list[todo_count].id);
+
+    todo_count++;
+}
 
 int main(void){
 
