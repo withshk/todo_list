@@ -29,6 +29,19 @@ void create_todo(const char *content) {
     todo_count++;
 }
 
+void read_todo(void){
+    if(todo_count == 0){
+        printf("할 일이 없습니다.\n");
+        return;
+    }
+
+    printf("\n=========할 일 목록=========\n");
+    for (int i = 0; i < todo_count; i++) {
+    
+        char status_marker = todo_list[i].is_completed ? 'X' : ' ';    
+    }
+}
+
 int main(void){
 
     printf("Todo List 시작\n");
