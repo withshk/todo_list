@@ -50,5 +50,5 @@ int main(void){
     printf("\n[테스트 출력]\n");
     printf("ID: %d | Content: %s | Completed: %d\n", temp_task.id, temp_task.content, temp_task.is_completed);
 
-    return 0;
+    return 0;  
 }
